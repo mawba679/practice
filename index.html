@@ -53,7 +53,7 @@
         <!--Navbar Start-->
         <div class="row">
             <div class="col-lg-2 col-md-12">
-                <a class="align-middle" href="http://suffixit.com/index.php">
+                <a class="align-middle" href="index.html">
                     <img class="img-fluid mt-2 mb-2" src="images/Suffix_IT_logo-name.png" alt="Suffix It Logo" width="139px">
                 </a>
             </div>
@@ -65,20 +65,36 @@
                         </button>
                         <div class="collapse navbar-collapse" id="navbarNav">
                             <ul class="navbar-nav ml-auto">
-                                <li class="nav-item bg_gray">
-                                    <a class="nav-link p-4" href="index.html">HOME</a>
+                                <li class="nav-item bg_gray active">
+                                    <a class="nav-link text-uppercase p-4" href="index.html">HOME</a>
                                 </li>
                                 <li class="nav-item bg_gray">
-                                    <a class="nav-link p-4" href="#">ABOUT</a>
+                                    <a class="nav-link text-uppercase p-4" href="#">ABOUT</a>
+                                </li>
+                                <li class="nav-item bg_gray dropdown">
+                                    <a class="nav-link text-uppercase p-4" href="" id="developmentServicesMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        DEVELOPMENT SERVICES
+                                    </a>
+                                    <div class="dropdown-menu" aria-labelledby="developmentServicesMenu">
+                                        <a class="dropdown-item" href="#">Interconnect Billing Solutions</a>
+                                        <a class="dropdown-item" href="#">Payroll System</a>
+                                        <a class="dropdown-item" href="#">Web Portal Development</a>
+                                        <a class="dropdown-item" href="#">E-Commerce Solutions</a>
+                                        <a class="dropdown-item" href="#">Web Design</a>
+                                        <a class="dropdown-item" href="#">Logo Design</a>
+                                    </div>
+                                </li>
+                                <li class="nav-item bg_gray dropdown">
+                                    <a class="nav-link text-uppercase p-4" href="support.html" id="supportMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        SUPPORT
+                                    </a>
+                                    <div class="dropdown-menu" aria-labelledby="supportMenu">
+                                        <a class="dropdown-item" href="#">Product Maintenance Support</a>
+                                        <a class="dropdown-item" href="#">Web Portal Maintenance Support</a>
+                                    </div>
                                 </li>
                                 <li class="nav-item bg_gray">
-                                    <a class="nav-link p-4" href="#">DEVELOPMENT SERVICES</a>
-                                </li>
-                                <li class="nav-item bg_gray">
-                                    <a class="nav-link p-4" href="support.html">SUPPORT</a>
-                                </li>
-                                <li class="nav-item bg_gray">
-                                    <a class="nav-link p-4" href="#">CONTACT</a>
+                                    <a class="nav-link text-uppercase p-4" href="#">CONTACT</a>
                                 </li>
                             </ul>
                         </div>
@@ -229,6 +245,12 @@
 <script type="text/javascript" src="js/jquery-3.4.1.js"></script>
 <script type="text/javascript" src="js/popper.min.js"></script>
 <script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script>
+    $( '#navbarNav .navbar-nav a' ).on( 'click', function () {
+        $( '#navbarNav .navbar-nav' ).find( 'li.active' ).removeClass( 'active' );
+        $( this ).parent( 'li' ).addClass( 'active' );
+    });
+</script>
 </body>
 </html>
 
