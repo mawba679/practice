@@ -1,3 +1,11 @@
+body{
+    font-family: "Open Sans", Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.428571429;
+    color: #333333;
+    background-color: #ffffff;
+}
+
 #header{
     background: #ffffff;
 }
@@ -13,6 +21,14 @@
     background: lightgray;
 }
 
+.navbar{
+    padding: 0px;
+}
+
+#navbarNav .navbar-nav li.active > a{
+    background-color: #F6F6F6;
+}
+
 .bg_gray:hover{
     background: #F6F6F6;
 }
@@ -21,10 +37,22 @@
     background-color: #F6F6F6;
 }
 
+#breadcrumb a{
+    text-decoration: none;
+}
+
 .breadcrumb{
     margin-bottom: 0px;
     background-color: transparent;
 }
+
+.dropdown:hover>.dropdown-menu {
+    display: block;
+    border: 4px solid #eee;
+    border-radius: 0px;
+    font: 13.5px 'Droid Sans', sans-serif;
+}
+
 
 
 
@@ -45,3 +73,4 @@
         margin-left: 0px !important;
     }
 }
+
